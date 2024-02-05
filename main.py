@@ -112,7 +112,7 @@ def get_news_data(game: str):
 
 
 def patch_news_list(news_list: list, patch: list, total: int):
-    return patch + news_list[:total - len(patch)]
+    return patch + news_list[-(total - len(patch)):]
 
 
 with app.app_context():
